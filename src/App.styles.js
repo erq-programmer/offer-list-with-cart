@@ -11,6 +11,9 @@ export const StyledCircularProgress = styled(CircularProgress)`
 
 export const Wrapper = styled.div`
   margin: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const StyledButton = styled(IconButton)`
@@ -18,8 +21,4 @@ export const StyledButton = styled(IconButton)`
   z-index: 100;
   right: 20px;
   top: 20px;
-`;
-
-export const ListColor = styled.div`
-  background-color: red;
 `;
