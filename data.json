@@ -1,0 +1,43 @@
+[
+  {
+    "category": {
+      "name": "Ciepłe dania",
+      "description": "Zazwyczaj 100g to szt. lub porcja. Zamówienie możliwe po wybraniu minimum 5 szt. lub 5 porcji jednego rodzaju."
+    },
+    "content": [
+      {
+        "id": 1,
+        "name": "Pieczeń z karczku z ziołami porcja",
+        "price": "10"
+      },
+      {
+        "id": 2,
+        "name": "Polędwiczki wieprzowe z sosem grzybowym lub pieprzowym porcja",
+        "price": "13"
+      },
+      {
+        "id": 3,
+        "name": "Polędwiczka wieprzowa po włosku (ser, sos pomidorowy) porcja",
+        "price": "13"
+      }
+    ]
+  },
+  {
+    "category": {
+      "name": "Ryby",
+      "description": "Na zamówienie, minimum 1 szt."
+    },
+    "content": [
+      {
+        "id": 4,
+        "name": "Łosoś ze szpinakiem 150g - szt.",
+        "price": "20"
+      },
+      {
+        "id": 5,
+        "name": "Miruna w sosie maślane cytrynowym 120g - szt.",
+        "price": "15"
+      }
+    ]
+  }
+]
