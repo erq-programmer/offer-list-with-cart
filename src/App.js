@@ -3,13 +3,25 @@ import { useState } from 'react';
 
 import Drawer from '@material-ui/core/Drawer';
 import Grid from '@material-ui/core/Grid';
-import List from '@material-ui/core/List';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Badge from '@material-ui/core/Badge';
-
-import { Wrapper, StyledCircularProgress, StyledButton } from './App.styles';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 import ProductItem from './components/ProductItem/ProductItem';
 import Cart from './components/Cart/Cart';
+
+import {
+  Wrapper,
+  StyledCircularProgress,
+  StyledButton,
+  StyledList,
+  CategorySection,
+  CategoryText,
+} from './App.styles';
+
+import 'fontsource-roboto';
 
 const getProducts = async () =>
   await (
@@ -20,6 +32,17 @@ const getProducts = async () =>
       },
     })
   ).json();
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#7F8054',
+    },
+    secondary: {
+      main: '#52542C',
+    },
+  },
+});
 
 const App = () => {
   const [cartOpen, setCartOpen] = useState(false);
@@ -67,49 +90,67 @@ const App = () => {
   }
 
   return (
-    <Wrapper>
-      <h1>Oferta cateringowa</h1>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Wrapper>
+        <Typography variant="h2" color="secondary">
+          Oferta cateringowa
+        </Typography>
 
-      <Drawer anchor="right" open={cartOpen} onClose={() => setCartOpen(false)}>
-        <Cart
-          cartItems={cartItems}
-          addToCart={handleAddToCart}
-          removeFromCart={handleRemoveFromCart}
-        />
-      </Drawer>
+        <Drawer
+          anchor="right"
+          open={cartOpen}
+          onClose={() => setCartOpen(false)}
+        >
+          <Cart
+            cartItems={cartItems}
+            addToCart={handleAddToCart}
+            removeFromCart={handleRemoveFromCart}
+            closeButton={() => setCartOpen(false)}
+          />
+        </Drawer>
 
-      <StyledButton
-        style={{
-          position: 'fixed',
-        }}
-        onClick={() => setCartOpen(true)}
-      >
-        <Badge badgeContent={getTotalItems(cartItems)} color="error">
-          <AddShoppingCartIcon />
-        </Badge>
-      </StyledButton>
+        <StyledButton
+          style={{
+            position: 'fixed',
+          }}
+          onClick={() => setCartOpen(true)}
+        >
+          <Badge badgeContent={getTotalItems(cartItems)} color="error">
+            <AddShoppingCartIcon color="secondary" />
+          </Badge>
+        </StyledButton>
 
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          {data?.map((item) => (
-            <div key={item.category.name}>
-              <h2>{item.category.name}</h2>
-              <p>{item.category.description}</p>
-              <List>
-                {item.content.map((product) => (
-                  <ProductItem
-                    key={product.id}
-                    productCategory={item.category.name}
-                    product={product}
-                    addButton={handleAddToCart}
-                  />
-                ))}
-              </List>
-            </div>
-          ))}
+        <Grid container>
+          <Grid item xs={12}>
+            {data?.map((item) => (
+              <CategorySection key={item.category.name}>
+                <CategoryText>
+                  <Typography variant="h4" component="h3">
+                    {item.category.name}
+                  </Typography>
+                  <Typography variant="subtitle2">
+                    {item.category.description}
+                  </Typography>
+                </CategoryText>
+                <Paper>
+                  <StyledList>
+                    {item.content.map((product) => (
+                      <ProductItem
+                        key={product.id}
+                        productCategory={item.category.name}
+                        product={product}
+                        addButton={handleAddToCart}
+                      />
+                    ))}
+                  </StyledList>
+                </Paper>
+              </CategorySection>
+            ))}
+          </Grid>
         </Grid>
-      </Grid>
-    </Wrapper>
+      </Wrapper>
+    </ThemeProvider>
   );
 };
 

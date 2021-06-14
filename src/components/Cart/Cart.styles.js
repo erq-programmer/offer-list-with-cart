@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
   width: 100vw;
   max-width: 500px;
