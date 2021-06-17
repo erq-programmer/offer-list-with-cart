@@ -44,5 +44,25 @@
         "priceDetails": "120g - szt."
       }
     ]
+  },
+  {
+    "category": {
+      "name": "Dodatki",
+      "description": "Zamówienie możliwe po wybraniu minimum 5 szt. lub 5 porcji jednego rodzaju."
+    },
+    "content": [
+      {
+        "id": 6,
+        "name": "Ryż z groszkiem i marchewką (na ciepło)",
+        "price": "4",
+        "priceDetails": "100g - porcja"
+      },
+      {
+        "id": 7,
+        "name": "Kluski śląskie (Do wyboru: jasne / ciemne oraz ugotowane / nie ugotowane)",
+        "price": "5",
+        "priceDetails": "200g - porcja"
+      }
+    ]
   }
 ]
