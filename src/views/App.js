@@ -9,8 +9,8 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import ProductItem from './components/ProductItem/ProductItem';
-import Cart from './components/Cart/Cart';
+import ProductItem from '../components/ProductItem/ProductItem';
+import Cart from '../components/Cart/Cart';
 
 import {
   Wrapper,
@@ -117,7 +117,7 @@ const App = () => {
           onClick={() => setCartOpen(true)}
         >
           <Badge badgeContent={getTotalItems(cartItems)} color="error">
-            <AddShoppingCartIcon color="secondary" />
+            <AddShoppingCartIcon color="secondary" size="medium" />
           </Badge>
         </StyledButton>
 

@@ -7,18 +7,21 @@
     "content": [
       {
         "id": 1,
-        "name": "Pieczeń z karczku z ziołami porcja",
-        "price": "10"
+        "name": "Pieczeń z karczku z ziołami",
+        "price": "10",
+        "priceDetails": "porcja"
       },
       {
         "id": 2,
-        "name": "Polędwiczki wieprzowe z sosem grzybowym lub pieprzowym porcja",
-        "price": "13"
+        "name": "Polędwiczki wieprzowe z sosem grzybowym lub pieprzowym",
+        "price": "13",
+        "priceDetails": "porcja"
       },
       {
         "id": 3,
-        "name": "Polędwiczka wieprzowa po włosku (ser, sos pomidorowy) porcja",
-        "price": "13"
+        "name": "Polędwiczka wieprzowa po włosku (ser, sos pomidorowy)",
+        "price": "13",
+        "priceDetails": "porcja"
       }
     ]
   },
@@ -30,13 +33,35 @@
     "content": [
       {
         "id": 4,
-        "name": "Łosoś ze szpinakiem 150g - szt.",
-        "price": "20"
+        "name": "Łosoś ze szpinakiem",
+        "price": "20",
+        "priceDetails": "150g - szt."
       },
       {
         "id": 5,
-        "name": "Miruna w sosie maślane cytrynowym 120g - szt.",
-        "price": "15"
+        "name": "Miruna w sosie maślane cytrynowym",
+        "price": "15",
+        "priceDetails": "120g - szt."
+      }
+    ]
+  },
+  {
+    "category": {
+      "name": "Dodatki",
+      "description": "Zamówienie możliwe po wybraniu minimum 5 szt. lub 5 porcji jednego rodzaju."
+    },
+    "content": [
+      {
+        "id": 6,
+        "name": "Ryż z groszkiem i marchewką (na ciepło)",
+        "price": "4",
+        "priceDetails": "100g - porcja"
+      },
+      {
+        "id": 7,
+        "name": "Kluski śląskie (Do wyboru: jasne / ciemne oraz ugotowane / nie ugotowane)",
+        "price": "5",
+        "priceDetails": "200g - porcja"
       }
     ]
   }
