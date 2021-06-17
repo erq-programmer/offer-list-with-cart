@@ -117,7 +117,7 @@ const App = () => {
           onClick={() => setCartOpen(true)}
         >
           <Badge badgeContent={getTotalItems(cartItems)} color="error">
-            <AddShoppingCartIcon color="secondary" />
+            <AddShoppingCartIcon color="secondary" size="medium" />
           </Badge>
         </StyledButton>
 

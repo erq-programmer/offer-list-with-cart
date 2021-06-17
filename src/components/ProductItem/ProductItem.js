@@ -10,7 +10,7 @@ const ProductItem = ({ productCategory, product, addButton }) => {
       <ListItem>
         <ListItemText
           primary={product.name}
-          secondary={`${product.price} zł`}
+          secondary={`${product.price} zł (${product.priceDetails})`}
         />
         <Button
           variant="contained"
