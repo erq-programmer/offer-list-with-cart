@@ -9,11 +9,7 @@ const CartCategory = ({ category, products, addToCart, removeFromCart }) => {
     <Wrapper>
       <Typography variant="h5">{category}</Typography>
       <List>
-        <CartItem
-          products={products}
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-        />
+        <CartItem products={products} addToCart={addToCart} removeFromCart={removeFromCart} />
       </List>
     </Wrapper>
   );

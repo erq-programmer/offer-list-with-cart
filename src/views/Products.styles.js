@@ -10,14 +10,6 @@ export const StyledCircularProgress = styled(CircularProgress)`
   transform: translate(-50%, -50%);
 `;
 
-export const Wrapper = styled.div`
-  margin: 80px 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Roboto', sans-serif;
-`;
-
 export const StyledButton = styled(IconButton)`
   position: fixed;
   z-index: 100;
