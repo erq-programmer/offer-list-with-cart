@@ -20,8 +20,7 @@ const Cart = ({ cartItems, addToCart, removeFromCart, closeButton }) => {
   const classes = useStyles();
   const productGroupedByCategory = groupBy(cartItems, 'category');
 
-  const calculateTotalPrice = (product) =>
-    product.reduce((acc, product) => acc + product.amount * product.price, 0);
+  const calculateTotalPrice = (product) => product.reduce((acc, product) => acc + product.amount * product.price, 0);
 
   return (
     <Wrapper>
@@ -39,27 +38,19 @@ const Cart = ({ cartItems, addToCart, removeFromCart, closeButton }) => {
       </Grid>
 
       {cartItems.length === 0 ? (
-        <Typography
-          variant="h5"
-          component="h3"
-          color="initial"
-          align="center"
-          style={{ marginTop: '2rem' }}
-        >
+        <Typography variant="h5" component="h3" color="initial" align="center" style={{ marginTop: '2rem' }}>
           Brak produktów w zamówieniu
         </Typography>
       ) : null}
-      {Object.entries(productGroupedByCategory)?.map(
-        ([category, categoryData]) => (
-          <CartCategory
-            key={category}
-            category={category}
-            products={categoryData}
-            addToCart={addToCart}
-            removeFromCart={removeFromCart}
-          />
-        )
-      )}
+      {Object.entries(productGroupedByCategory)?.map(([category, categoryData]) => (
+        <CartCategory
+          key={category}
+          category={category}
+          products={categoryData}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+        />
+      ))}
       {cartItems.length > 0 ? (
         <Typography variant="h6" color="initial" align="right">
           <strong>Cena za catering: {calculateTotalPrice(cartItems)} zł</strong>
