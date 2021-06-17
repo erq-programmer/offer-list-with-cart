@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/offer-list-with-cart/static/js/main.72bc116a.chunk.js",
-    "main.js.map": "/offer-list-with-cart/static/js/main.72bc116a.chunk.js.map",
+    "main.js": "/offer-list-with-cart/static/js/main.cb294573.chunk.js",
+    "main.js.map": "/offer-list-with-cart/static/js/main.cb294573.chunk.js.map",
     "runtime-main.js": "/offer-list-with-cart/static/js/runtime-main.b138b6d7.js",
     "runtime-main.js.map": "/offer-list-with-cart/static/js/runtime-main.b138b6d7.js.map",
     "static/css/2.55b33c88.chunk.css": "/offer-list-with-cart/static/css/2.55b33c88.chunk.css",
-    "static/js/2.357b497b.chunk.js": "/offer-list-with-cart/static/js/2.357b497b.chunk.js",
-    "static/js/2.357b497b.chunk.js.map": "/offer-list-with-cart/static/js/2.357b497b.chunk.js.map",
+    "static/js/2.e333a1bf.chunk.js": "/offer-list-with-cart/static/js/2.e333a1bf.chunk.js",
+    "static/js/2.e333a1bf.chunk.js.map": "/offer-list-with-cart/static/js/2.e333a1bf.chunk.js.map",
     "index.html": "/offer-list-with-cart/index.html",
     "static/css/2.55b33c88.chunk.css.map": "/offer-list-with-cart/static/css/2.55b33c88.chunk.css.map",
-    "static/js/2.357b497b.chunk.js.LICENSE.txt": "/offer-list-with-cart/static/js/2.357b497b.chunk.js.LICENSE.txt",
+    "static/js/2.e333a1bf.chunk.js.LICENSE.txt": "/offer-list-with-cart/static/js/2.e333a1bf.chunk.js.LICENSE.txt",
     "static/media/index.css": "/offer-list-with-cart/static/media/roboto-vietnamese-400-normal.52cebac0.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.b138b6d7.js",
     "static/css/2.55b33c88.chunk.css",
-    "static/js/2.357b497b.chunk.js",
-    "static/js/main.72bc116a.chunk.js"
+    "static/js/2.e333a1bf.chunk.js",
+    "static/js/main.cb294573.chunk.js"
   ]
 }
